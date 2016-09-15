@@ -4,7 +4,7 @@ This is a sample app demonstrating how you can leverage Kinect with Unity3D
 
 ##Adding the Kinect plugin 
 
-* Download the Unity Pro packages from developer.microsoft.com/windows/kinec/tools
+* 	Download the Unity Pro packages from developer.microsoft.com/windows/kinec/tools
 *	After you finish downloading the zip file, extract it to a known location
 *	The folder contains three Kinect plugins (the basic one, face recognition, gesture builder), each wrapping functionality from the Kinect v2 SDK
 *	Open Unity and create a new project
@@ -48,10 +48,8 @@ void Start () {
  }
 }
 ```
-*With every frame we want to check if BodySrcManager is still null. In this case we return. 
-*	Otherwise we grab the data. Kinect can track up to six bodies so we need to assign it to an array that will differentiate between the different bodies. 
-private Body[] bodies;
-*	Body comes with the Kinect for Windows namespace
+*	With every frame we want to check if `BodySrcManager` is still null. In this case we return. 
+*	Otherwise we grab the data. 
 
 ```c#
 // Update is called once per frame
@@ -79,9 +77,12 @@ return;
  }
 }
 ```
+* Kinect can track up to six bodies so we need to assign it to an array that will differentiate between the different bodies. 
+* Declare the array `private Body[] bodies;`
 * We save the script and run the game. As you can see the object doesn’t move very far. That’s why we need a multiplier. Let’s create one and multiply it to the position of the object. 
-public float multiplier = 10f;
-gameObject.transform.position = new Vector3(pos.X * multiplier, pos.Y*multiplier);
+
+```c# public float multiplier = 10f;```
+```c# gameObject.transform.position = new Vector3(pos.X * multiplier, pos.Y*multiplier);```
 	
 * Let’s start the program again. You can see the movement has now a bigger impact. 
 
