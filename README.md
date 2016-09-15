@@ -56,23 +56,23 @@ void Update () {
 	
  if(BodySrcManager == null)
  {
-return;
+ 	return;
  }
  bodies = bodyManager.GetData();
  if(bodies == null)
  {
-       return;
+ 	return;
  }
  foreach (var body in bodies)
  {
  if(body == null)
  {
- continue;
+ 	continue;
  }
  if (body.IsTracked)
  {
-  var pos = body.Joints[TrackedJoint].Position;
-  gameObject.transform.position = new Vector3(pos.X, pos.Y);
+ 	var pos = body.Joints[TrackedJoint].Position;
+ 	gameObject.transform.position = new Vector3(pos.X, pos.Y);
  }
 }
 ```
