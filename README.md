@@ -17,22 +17,21 @@ This is a sample app demonstrating how you can leverage Kinect with Unity3D
 *	Create a new GameObject by clicking GameObject -> Create Empty
 *	Rename it to BodySourceManager
 *	Select it and add Body Source Management as component 
-*	Create again a new GameObject  by clicking GameObject -> Create Empty
+*	Create again a new GameObject by clicking GameObject -> Create Empty
 *	Rename it to Object1 
 *	In Assets create a new folder and call it Script
-*	In this folder create a C# script and name it DetectJoints 
+*	In this folder create a C# script and name it 'DetectJoints' 
 *	Drag and drop it on Object1
 *	Now let’s create a particle system we will be able to move with our hand. Right click on Object1, create 3D Object, and give it a particle system
-*	Double click on the DetectJoints script will open Visual Studio 
-*	In the Visual Studio solution add the import statement: using.Windows.Kinect;
-*	Asign the Body Source Manager game object that we just created to the script by adding a public variable and assigning the GameObject to Object1 in Unity. 
-public GameObject BodySrcManager;
-*	Create a JointType enum to be able to select the joint you would like to track 
-public JointType TrackedJoint;
+*	Double click on the 'DetectJoints' script will open Visual Studio 
+*	In the Visual Studio solution add the import statement: `using.Windows.Kinect;`
+*	Asign the Body Source Manager game object that we just created to the script by adding a public variable `public GameObject BodySrcManager;` and assigning the `GameObject` to `Object1` in Unity. 
+*	Create a `JointType` enum to enable selection of the joint you want to track 
+`public JointType TrackedJoint;`
 *	Save the script and go back to Unity and select from the drop down menu of TrackedJoint the joint you want to track. For this example, I chose HandLeft. 
 *	Add a private variable that takes care of the data that we get from the Body Source Manager component from the script. 
-private BodySourceManager bodyManager;
-We assign it once and grab the data from there. We take care of that in the Start()-Method
+`private BodySourceManager bodyManager;`
+We assign it once and grab the data from there. We take care of that in the `Start()`-Method
 
 ```c#
 // Use this for initialization
@@ -48,8 +47,8 @@ void Start () {
  }
 }
 ```
-*	With every frame we want to check if `BodySrcManager` is still null. In this case we return. 
-*	Otherwise we grab the data. 
+*	With every frame we want to check if `BodySrcManager` is still null. In this case we return
+*	Otherwise we grab the data
 
 ```c#
 // Update is called once per frame
@@ -79,10 +78,11 @@ return;
 ```
 * Kinect can track up to six bodies so we need to assign it to an array that will differentiate between the different bodies. 
 * Declare the array `private Body[] bodies;`
-* We save the script and run the game. As you can see the object doesn’t move very far. That’s why we need a multiplier. Let’s create one and multiply it to the position of the object. 
-
-```c# public float multiplier = 10f;```
-```c# gameObject.transform.position = new Vector3(pos.X * multiplier, pos.Y*multiplier);```
+* We save the script and run the game. As you can see the object doesn’t move very far. That’s why we need a multiplier. 
+* Let’s create one 
+`public float multiplier = 10f;`
+and multiply it to the position of the object
+` gameObject.transform.position = new Vector3(pos.X * multiplier, pos.Y*multiplier);`
 	
-* Let’s start the program again. You can see the movement has now a bigger impact. 
+* Let’s start the program again. You can see the movement has now a bigger impact 
 
