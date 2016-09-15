@@ -4,7 +4,7 @@ This is a sample app demonstrating how you can leverage Kinect with Unity3D
 
 ##Adding the Kinect plugin 
 
-* 	Download the Unity Pro packages from developer.microsoft.com/windows/kinec/tools
+* 	Download the Unity Pro packages(https://go.microsoft.com/fwlink/p/?LinkId=513177) from http://developer.microsoft.com/windows/kinect/tools
 *	After you finish downloading the zip file, extract it to a known location
 *	The folder contains three Kinect plugins (the basic one, face recognition, gesture builder), each wrapping functionality from the Kinect v2 SDK
 *	Open Unity and create a new project
