@@ -14,12 +14,12 @@ This is a sample app demonstrating how you can leverage Kinect with Unity3D
 
 ##Enabling motion tracking with Kinect
 
-*	Create a new GameObject by clicking GameObject -> Create Empty
-*	Rename it to BodySourceManager
-*	Select it and add Body Source Management as component 
-*	Create again a new GameObject by clicking GameObject -> Create Empty
-*	Rename it to Object1 
-*	In Assets create a new folder and call it Script
+*	Create a new GameObject by clicking 'GameObject -> Create Empty'
+*	Rename it to 'BodySourceManager'
+*	Select it and add 'Body Source Management' as component 
+*	Create again a new GameObject by clicking 'GameObject' -> 'Create Empty'
+*	Rename it to 'Object1 '
+*	In Assets create a new folder and call it 'Script'
 *	In this folder create a C# script and name it 'DetectJoints' 
 *	Drag and drop it on Object1
 *	Now let’s create a particle system we will be able to move with our hand. Right click on Object1, create 3D Object, and give it a particle system
