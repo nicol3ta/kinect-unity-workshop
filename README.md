@@ -8,7 +8,7 @@ This is a sample app demonstrating how you can leverage Kinect with Unity3D
 *	After you finish downloading the zip file, extract it to a known location
 *	The folder contains three Kinect plugins (the basic one, face recognition, gesture builder), each wrapping functionality from the Kinect v2 SDK
 *	Open Unity and create a new project
-*	Add the Kinect plugin into your new project by selecting Assets from the top menu and then Import Package | Custom Package …
+*	Add the Kinect plugin into your new project by selecting Assets from the top menu and then 'Import Package' -> 'Custom Package …'
 *	Drag and drop the KinectView samle project into the Assests directory in your project folder
 *	Select KinectView and then double click on the MainScene scene contained inside it. This should open up your Kinect-enabled scene inside the game window. Click on the single arrow near the top center of the IDE to see your application in action. The Kinect will automatically turn on and you should see a color image, an infrared image, a rendering of any bodies in the scene and finally a point cloud simulation.
 
