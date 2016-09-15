@@ -34,6 +34,7 @@ public JointType TrackedJoint;
 private BodySourceManager bodyManager;
 We assign it once and grab the data from there. We take care of that in the Start()-Method
 
+```c#
 // Use this for initialization
 void Start () {
 
@@ -46,11 +47,13 @@ void Start () {
    bodyManager = BodySrcManager.GetComponent<BodySourceManager>();
  }
 }
-
-*	With every frame we want to check if BodySrcManager is still null. In this case we return. 
+```
+*With every frame we want to check if BodySrcManager is still null. In this case we return. 
 *	Otherwise we grab the data. Kinect can track up to six bodies so we need to assign it to an array that will differentiate between the different bodies. 
 private Body[] bodies;
-*	Body comes with the Kinect for Windows namespace. 
+*	Body comes with the Kinect for Windows namespace
+
+```c#
 // Update is called once per frame
 void Update () {
 	
@@ -75,9 +78,10 @@ return;
   gameObject.transform.position = new Vector3(pos.X, pos.Y);
  }
 }
-*		We save the script and run the game. As you can see the object doesn’t move very far. That’s why we need a multiplier. Let’s create one and multiply it to the position of the object. 
+```
+* We save the script and run the game. As you can see the object doesn’t move very far. That’s why we need a multiplier. Let’s create one and multiply it to the position of the object. 
 public float multiplier = 10f;
 gameObject.transform.position = new Vector3(pos.X * multiplier, pos.Y*multiplier);
 	
-*		Let’s start the program again. You can see the movement has now a bigger impact. 
+* Let’s start the program again. You can see the movement has now a bigger impact. 
 
