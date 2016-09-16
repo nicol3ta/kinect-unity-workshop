@@ -14,6 +14,7 @@ This is a sample app demonstrating how you can leverage Kinect with Unity3D
 
 ##Enabling motion tracking with Kinect
 
+*	Create a new scene and save it as 'Gestures'
 *	Create a new GameObject by clicking 'GameObject -> Create Empty'
 *	Rename it to 'BodySourceManager'
 *	Select it and add 'Body Source Management' as component 
